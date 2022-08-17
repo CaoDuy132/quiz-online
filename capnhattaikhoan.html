@@ -1,0 +1,310 @@
+<!-- <section id="portfolio-details" class="portfolio-details mt-10">
+  <div class="container" data-aos="fade-up">
+    <div class="row g-0">
+      <div class="col-lg-5 text-center">
+        <div class="">
+          <ul class="list-unstyled mb-0">
+            <li>
+              <img
+                class="rounded-circle w-50"
+                src="assets/img/user.jpg"
+                alt=""
+              />
+
+              <p class="font-weight-bold">Đỗ Cao Duy</p>
+              <p>docaoduy132@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="portfolio-info">
+          
+          <h3 class="font-weight-bold h1-responsive text-center">
+            Thông tin tài khoản
+          </h3>
+          <div class="row">
+           
+            <div class="col-md-12 mb-md-0 mb-5">
+              <form
+                id="contact-form"
+                name="contact-form"
+                action="mail.php"
+                method="POST"
+              >
+               
+                <div class="row">
+                 
+                  <div class="col-md-12">
+                    <div class="md-form mb-0">
+                      <label for="name" class="">Họ và tên</label>
+                      <input
+                        ng-model="student.fullname"
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                        value="Đỗ Cao Duy"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="md-form mb-0">
+                      <label for="name" class="">Tài khoản</label>
+                      <input
+                        ng-model="student.username"
+                        type="text"
+                        id="name"
+                        name="username"
+                        class="form-control"
+                        value="Đỗ Cao Duy"
+                      />
+                    </div>
+                  </div>
+               
+                  <div class="col-md-12">
+                    <div class="md-form mb-0">
+                      <label for="email" class="">Email</label>
+                      <input
+                        ng-model="student.email"
+                        type="text"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        value="docaoduy132@gmail.com"
+                      />
+                    </div>
+                  </div>
+                  
+                </div>
+               
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="md-form mb-0">
+                      <label for="subject" class="">Ngày sinh </label>
+                      <input
+                        ng-model="student.birthday"
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        class="form-control"
+                        value="0386134526"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+              
+              </form>
+              <div class="text-center pt-1 mb-5 pb-1 mt-3">
+                <a
+                  class="btn btn-primary col-md-12"
+                  type="button"
+                  ng-click="updateAcc()"
+                >
+                  Cập nhật
+                </a>
+              </div>
+
+              <div class="status"></div>
+            </div>
+
+          </div>
+      
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section> -->
+<section class="h-100 gradient-form mt-100" style="background-color: #eee">
+  <div class="d-flex justify-content-center content">
+    <div class="card card_extend">
+      <div class="card-header">
+        <h3 class="text-center">Cập nhật tài khoản</h3>
+      </div>
+      <div class="card-body">
+        <form name="frmRegister">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input
+              type="text"
+              name="fullname"
+              class="form-control"
+              placeholder="Họ và tên"
+              ng-model="student.fullname"
+              required
+              minlength="5"
+            />
+            <div class="w-100">
+              <span
+                ng-show="frmRegister.fullname.$error.required"
+                class="text-danger"
+                >Vui lòng nhập họ và tên</span
+              >
+              <span
+                ng-show="frmRegister.username.$error.minlength"
+                class="text-danger"
+                >Tên tài khoản phải hơn 5 kí tự</span
+              >
+            </div>
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="fas fa-user-check"></i
+              ></span>
+            </div>
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              placeholder="Tài khoản"
+              ng-model="student.username"
+              required
+              minlength="6"
+            />
+            <div class="w-100">
+              <span
+                ng-show="frmRegister.username.$error.required"
+                class="text-danger"
+                >Vui lòng nhập tên tài khoản</span
+              >
+              <span
+                ng-show="frmRegister.username.$error.minlength"
+                class="text-danger"
+                >Tên tài khoản phải hơn 6 kí tự</span
+              >
+            </div>
+          </div>
+
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="fas fa-envelope"></i
+              ></span>
+            </div>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="Email"
+              ng-model="student.email"
+              required
+            />
+            <div class="w-100">
+              <span
+                ng-show="frmRegister.email.$error.required"
+                class="form-text text-danger"
+                >Vui lòng nhập email</span
+              >
+              <span
+                ng-show="frmRegister.email.$error.email"
+                class="form-text text-danger"
+                >Không đúng định dạng email</span
+              >
+            </div>
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-phone"></i></span>
+            </div>
+            <input
+              type="text"
+              name="phone"
+              class="form-control"
+              placeholder="Số điện thoại "
+              ng-model="student.phone"
+              required
+              minlength="10"
+            />
+            <div class="w-100">
+              <span
+                ng-show="frmRegister.phone.$error.required"
+                class="text-danger"
+                >Vui lòng nhập số điện thoại</span
+              >
+              <span
+                ng-show="frmRegister.phone.$error.minlength"
+                class="text-danger"
+                >Số điện thoại không được ít hơn 10 ký tự</span
+              >
+            </div>
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+            </div>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Mật khẩu"
+              ng-model="student.password"
+              name="password"
+              required
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+            />
+            <div class="w-100">
+              <span
+                ng-show="frmRegister.password.$error.required"
+                class="text-danger"
+                >Vui lòng nhập mật khẩu</span
+              >
+
+              <span
+                ng-show="frmRegister.password.$error.pattern"
+                class="text-danger"
+                >Tối thiểu 6 kí tự bao gồm chữ số</span
+              >
+            </div>
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input
+              type="text"
+              name="birthday"
+              class="form-control"
+              placeholder="Nhập đúng định dạng dd/mm/yyyy"
+              ng-model="student.birthday"
+              required
+              pattern="^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$"
+            />
+            <div class="w-100">
+              <span
+                ng-show="frmRegister.birthday.$error.required"
+                class="form-text text-danger"
+                >Vui lòng nhập ngày sinh</span
+              >
+              <span
+                ng-show="frmRegister.birthday.$error.pattern"
+                class="form-text text-danger"
+                >Không đúng định dạng ngày sinh</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input
+              ng-disabled="frmRegister.$invalid"
+              type="submit"
+              value="Cập nhật"
+              class="btn float-right login_btn"
+              ng-click="updateAcc()"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          <a href="#!khoahoc">Quay về trang chủ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

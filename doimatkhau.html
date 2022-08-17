@@ -1,0 +1,119 @@
+<section class="h-100 gradient-form" style="background-color: #eee">
+  <section class="h-100 gradient-form" style="background-color: #eee">
+    <div class="d-flex justify-content-center content">
+      <div class="card card_extend">
+        <div class="card-header">
+          <h3>Đổi mật khẩu</h3>
+          <div class="d-flex justify-content-end social_icon">
+            <span><i class="fab fa-facebook-square"></i></span>
+            <span><i class="fab fa-google-plus-square"></i></span>
+            <span><i class="fab fa-twitter-square"></i></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <form name="FormChangePass">
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"
+                  ><i class="fas fa-user"></i
+                ></span>
+              </div>
+              <input
+                type="text"
+                name="username"
+                class="form-control"
+                placeholder="Nhập tài khoản"
+                ng-model="username"
+                required
+                minlength="6"
+              />
+              <div class="w-100">
+                <span
+                  ng-show="FormChangePass.username.$error.required"
+                  class="text-danger"
+                  >Vui lòng nhập tên tài khoản</span
+                >
+                <span
+                  ng-show="FormChangePass.username.$error.minlength"
+                  class="text-danger"
+                  >Tên tài khoản phải hơn 6 kí tự</span
+                >
+              </div>
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input
+                ng-model="password"
+                name="password"
+                type="password"
+                class="form-control"
+                placeholder="Nhập mật khẩu cũ"
+                required
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+              />
+              <div class="w-100">
+                <span
+                  ng-show="FormChangePass.password.$error.required"
+                  class="text-danger"
+                  >Vui lòng nhập mật khẩu</span
+                >
+
+                <span
+                  ng-show="FormChangePass.password.$error.pattern"
+                  class="text-danger"
+                  >Tối thiểu 6 kí tự bao gồm chữ số</span
+                >
+              </div>
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input
+                ng-model="repassword"
+                type="password"
+                class="form-control"
+                placeholder="Nhập mật khẩu mới"
+                required
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+                name="repassword"
+              />
+              <div class="w-100">
+                <span
+                  ng-show="FormChangePass.repassword.$error.required"
+                  class="text-danger"
+                  >Vui lòng nhập mật khẩu</span
+                >
+
+                <span
+                  ng-show="FormChangePass.repassword.$error.pattern"
+                  class="text-danger"
+                  >Tối thiểu 6 kí tự bao gồm chữ số</span
+                >
+              </div>
+            </div>
+            <div class="row align-items-center remember">
+              <input type="checkbox" />Nhớ mật khẩu
+            </div>
+            <div class="form-group">
+              <input
+                ng-disabled="FormChangePass.$invalid"
+                ng-click="updatePass()"
+                type="submit"
+                value="Cập nhật"
+                class="btn float-right login_btn"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-center links">
+            Đăng ký mật khẩu mới?<a href="#!dangky">Đăng ký</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

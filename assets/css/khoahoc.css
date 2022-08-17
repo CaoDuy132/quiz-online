@@ -1,0 +1,200 @@
+/* @import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+} */
+
+
+
+
+
+h1{
+    text-align:center;
+    margin-bottom:50px;
+    margin-top:50px;
+  }
+  /* .img_control{
+      display:inline-block;
+  } */
+.mt-30{
+    margin-top: 200px !important;
+}
+.mt-100{
+    margin-top: 100px !important;
+}
+.content{
+    min-height: 450px
+}
+input{
+    font-size: 12px;
+}
+.btn_left{
+    width: 50px !important;
+    text-align: center;
+    position: absolute;
+    top: 46%;
+    left: 10%
+}
+.portfolio-details{
+    min-height: 460px;
+}
+.btn_right{
+    width: 50px !important;
+    text-align: center;
+    position: absolute;
+    top: 46%;
+    right: 10%
+}
+.img_control .img{
+    width: 80%;
+}
+.mt-10{
+    margin-top: 100px !important;
+}
+.course{
+    margin: auto;
+    width: 70%;
+}
+.num{
+
+    position:absolute;
+    right: 7%;
+    
+}
+.green{
+    font-weight: 700;
+    color: red;
+}
+@-webkit-keyframes my {
+    0% { color: #F8CD0A; } 
+    50% { color: #28a745;  } 
+    100% { color: #F8CD0A;  } 
+}
+@-moz-keyframes my { 
+    0% { color: #F8CD0A;  } 
+    50% { color: #28a745;  }
+    100% { color: #F8CD0A;  } 
+}
+@-o-keyframes my { 
+    0% { color: #F8CD0A; } 
+    50% { color: #28a745; } 
+    100% { color: #F8CD0A;  } 
+}
+@keyframes my { 
+    0% { color: #F8CD0A;  } 
+    50% { color: #28a745;  }
+    100% { color: #F8CD0A;  } 
+}
+.diem{
+    
+    
+    font-weight: 700;
+    color:#28a745;
+    -webkit-animation: my 700ms infinite;
+    -moz-animation: my 700ms infinite; 
+    -o-animation: my 700ms infinite; 
+    animation: my 1300ms infinite;
+}
+
+  .blog-card {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      margin-bottom: 30px;
+      border-radius: 6px;
+      color: rgba(0, 0, 0, 0.87);
+      background: #fff;
+      box-shadow: 0 0 5px #ccc;
+      /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); */
+  }
+  .blog-card .blog-card-image {
+      height: 60%;
+      position: relative;
+      overflow: hidden;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: -30px;
+      border-radius: 6px;
+      box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+  .blog-card .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      pointer-events: none;
+  }
+  .blog-card .blog-table {
+      padding: 15px 30px;
+  }
+  .blog-table {
+      margin-bottom: 0px;
+  }
+  .blog-category {
+      position: relative;
+      line-height: 0;
+      margin: 15px 0;
+  }
+  .blog-text-success {
+      color: #28a745!important;
+  }
+  .blog-card-blog .blog-card-caption {
+      margin-top: 5px;
+  }
+  .blog-card-caption {
+      font-weight: 700;
+      font-family: "Roboto Slab", "Times New Roman", serif;
+  }
+  .fa {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  .blog-card-caption, .blog-card-caption a {
+      color: #333;
+      text-decoration: none;
+  }
+  
+  p {
+      color: #3C4857;
+  }
+  
+  p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+  }
+  .blog-card .ftr {
+      margin-top: 15px;
+      margin-left: 250px
+  }
+  .blog-card .ftr .author {
+      color: #888;
+  }
+  
+  .blog-card .ftr div {
+      display: inline-block;
+  }
+  .blog-card .author .avatar {
+      width: 36px;
+      height: 36px;
+      overflow: hidden;
+      border-radius: 50%;
+      margin-right: 5px;
+  }
+  .blog-card .ftr .stats {
+      position: relative;
+      top: 1px;
+      font-size: 14px;
+  }
+  .blog-card .ftr .stats {
+      float: right;
+      line-height: 30px;
+  }
+
+ 

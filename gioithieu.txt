@@ -1,0 +1,38 @@
+
+Chương trình thi trắc nghiệm:
+Giai đoạn 1: Thiết kế layout
+Giai đoạn 2: Chương trình thi trắc nghiệm 
++ Ở trang chủ sẽ hiển thị danh sách môn thi. Có  xác nhận là có muốn thi hay không?
+
+ +Thời gian thi 15 phút nếu hết thời gian mà chưa click"Kết thúc bài thi sẽ bị" out ra ngoài trang chủ
+
+ +Khi chưa chọn đáp án disabled nút "Kiểm Tra",khi chọn đáp án và click "Kiểm Tra " thì disabled nút Kiểm Tra tránh sinh viên  chọn nhiều câu trả lời.
+    Next qua câu mới thì sẽ hiện câu hỏi và khi chọn đáp án sẽ cho sinh viên click "Kiểm Tra"
+
+ +Mỗi lần làm đúng số điểm sẽ được cập nhật lên 1;
+
+ +Khi đã Kiểm Tra thì không được làm lại  câu đã chấm điểm 
+
+ +Click vào nút "Kết thúc bài thi" khi chưa hết giờ sẽ được xác nhận 1 lần nữa là Có hay Không.
+ Nếu đồng ý kết thúc bài thì sẽ chuyển ra trang index. Nếu không đồng ý  sẽ tiếp tục làm bài.
+
+ Giai đoạn 3: Chức năng login, logout, validate form:
+
+ -Đầu tiên vào trang mà chưa đăng nhập thì sẽ hiển thị "Tài khoản" và chưa 2 item dropdown là Đăng nhập và Đăng ký
+
+ -Khi người dùng đăng nhập vào hệ thống thì xuất hiện:
+
+   +Tên người dùng
+   
+   +Đăng xuất
+
+   +Cập nhật tài khoản
+
+   +Đổi mật khẩu
+
+   +Quên mật khẩu
+
+-Validate tất cả các Form
+-Nếu chưa nhập các trường sẽ Disable nút submit
+
+-Chỉnh sửa lại giao diện  đẹp hơn giai đoạn 1 (Có responsive)

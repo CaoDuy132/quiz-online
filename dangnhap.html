@@ -1,0 +1,195 @@
+<!-- code -->
+
+<section class="h-100 gradient-form mt-100" style="background-color: #eee">
+  <div class="d-flex justify-content-center content">
+    <div class="card card_extend">
+      <div class="card-header">
+        <h3>Đăng nhập</h3>
+        <div class="d-flex justify-content-end social_icon">
+          <span><i class="fab fa-facebook-square"></i></span>
+          <span><i class="fab fa-google-plus-square"></i></span>
+          <span><i class="fab fa-twitter-square"></i></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <form name="frmLogin">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              placeholder="Nhập tài khoản"
+              ng-model="username"
+              required
+              minlength="6"
+            />
+            <div class="w-100">
+              <span
+                ng-show="frmLogin.username.$error.required"
+                class="text-danger"
+                >Vui lòng nhập tên tài khoản</span
+              >
+              <span
+                ng-show="frmLogin.username.$error.minlength"
+                class="text-danger"
+                >Tên tài khoản phải hơn 6 kí tự</span
+              >
+            </div>
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input
+              ng-model="password"
+              name="password"
+              type="password"
+              class="form-control"
+              placeholder="Mật khẩu"
+              required
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+            />
+            <div class="w-100">
+              <span
+                ng-show="frmLogin.password.$error.required"
+                class="text-danger"
+                >Vui lòng nhập mật khẩu</span
+              >
+
+              <span
+                ng-show="frmLogin.password.$error.pattern"
+                class="text-danger"
+                >Tối thiểu 6 kí tự bao gồm chữ số</span
+              >
+            </div>
+          </div>
+          <div class="row align-items-center remember">
+            <input type="checkbox" />Nhớ mật khẩu
+          </div>
+          <div class="form-group">
+            <input
+              ng-disabled="frmLogin.$invalid"
+              ng-click="login()"
+              type="submit"
+              value="Đăng nhập"
+              class="btn float-right login_btn"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          Bạn chưa có mật khẩu?<a href="#!dangky">Đăng ký</a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a href="#!quenmatkhau">Bạn quên mật khẩu?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 
+    <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0 justify-content-center">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+                <div class="text-center">
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                    style="width: 185px"
+                    alt="logo"
+                  />
+                  <h4 class="mt-1 mb-5 pb-1">Đăng nhập</h4>
+                </div>
+
+                <form>
+                  <div class="form-outline mb-4">
+                    <label for="">Nhập tài khoản</label>
+                    <input
+                      ng-model="username"
+                      type="text"
+                      id="form2Example22"
+                      class="form-control"
+                      placeholder="Nhập mật khẩu"
+                    />
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label for="">Nhập mật khẩu</label>
+                    <input
+                      ng-model="password"
+                      type="password"
+                      id="form2Example22"
+                      class="form-control"
+                      placeholder="Nhập mật khẩu"
+                    />
+                  </div>
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <a
+                      class="btn btn-block fa-sm gradient-custom-2 mb-3"
+                      type="button"
+                      ng-click="login()"
+                    >
+                      Đăng nhập
+                    </a>
+                    <a class="text-muted" href="#!">Quên mật khẩu?</a>
+                  </div>
+                  <div class="text-center">
+                    <p>Đăng nhập bằng:</p>
+                    <button
+                      type="button"
+                      class="btn btn-link btn-floating mx-1"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="btn btn-link btn-floating mx-1"
+                    >
+                      <i class="fas fa-user"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="btn btn-link btn-floating mx-1"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="btn btn-link btn-floating mx-1"
+                    >
+                      <i class="fab fa-github"></i>
+                    </button>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-center pb-4"
+                  >
+                    <p class="mb-0 me-2">Bạn chưa có tài khoản?</p>
+                    <button
+                      type="button"
+                      href="dangky.html"
+                      class="btn btn-outline-danger"
+                    >
+                      Đăng ký
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ -->

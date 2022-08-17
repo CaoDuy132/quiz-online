@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Trang chủ</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+   
+    <!-- Favicons -->
+    <link rel="stylesheet" href="assets/css/form.css" />
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link rel="stylesheet" href="assets/css/khoahoc.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/sweetalert2.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"7500
+
+    />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/css/variables.css" rel="stylesheet" />
+
+    <link href="assets/css/main.css" rel="stylesheet" />
+   
+
+
+  </head>
+
+  <body ng-app="myApp" >
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top mb-4" data-scrollto-offset="0">
+      <div
+        class="container-fluid d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center scrollto me-auto me-lg-0"
+        >
+      <h1>Trắc nghiệm online<span>.</span></h1>
+        </a>
+
+        <nav id="navbar" class="navbar justify-content-end">
+          <ul>
+            <li class="dropdown">
+              <a href="#/" >
+                <span>Trang chủ</span>
+              </i
+              ></a>
+            </li>
+
+            <li>
+              <a class="nav-link scrollto" href="#!gioithieu" >Giới thiệu</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="#!lienhe"
+                >Liên hệ</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="#!khoahoc"
+                >Khóa học</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="#!gopy" >Góp ý</a>
+            </li>
+           
+
+            <li class="dropdown">
+              <a
+                ><span>{{fullname}}</span>
+                <i class="bi bi-chevron-down dropdown-indicator"></i
+              ></a>
+              <ul>
+                <li><a href="#"  ng-click="logout()" ng-show="index>=0" ng-hide="student==null">Đăng xuất</a></li>
+                <li class="dropdown"><a >Chức năng
+                  <i class="bi bi-chevron-down dropdown-indicator"></i>
+                </a>
+
+                  <ul>
+                    <li><a class="dropdown-item"href="#!doimatkhau" ng-show="index>=0"  ng-hide="student==null">Đổi mật khẩu</a></li>
+                    <li><a class="dropdown-item"href="#!dangnhap"ng-hide="student!=null" >Đăng nhập</a></li>
+                    <li><a class="dropdown-item"href="#!dangky" >Đăng ký</a></li>
+                    <li><a class="dropdown-item" href="#!quenmatkhau" ng-show="index>=0"  ng-hide="student==null">Quên mật khẩu</a></li>
+                    <li><a class="dropdown-item" href="#!capnhattaikhoan" ng-show="index>=0" ng-hide="student==null">Cập nhật tài khoản</a></li>
+                  </ul>
+                
+                </li>
+
+              </ul>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="#!hoidap" >Hỏi đáp</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto w-50" href="">
+                <img class="w-25 rounded-circle" src="assets/img/user.jpg" alt="">
+              </a>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle d-none"></i>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <main ng-view>
+      <!-- ======= Breadcrumbs ======= -->
+      <!-- ======= Blog Section ======= -->
+      <section class="inner-page">
+        <div  ng-include="'thitracnghiem.html'">
+
+        </div>
+
+      </section>
+     
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+
+      <div class="footer-legal text-center">
+        <div
+          class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center"
+        >
+          <div
+            class="d-flex flex-column align-items-center align-items-lg-start"
+          >
+            <div class="copyright">
+              &copy; Sinh Viên: <strong><span>PS18927 Đỗ Cao Duy</span></strong
+              >
+            </div>
+            <div class="credits">
+                         Email:  <a href="https://www.facebook.com/caoduy26/">duydcps18927@fpt.edu.vn</a>
+            </div>
+          </div>
+          <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <a
+      href="#"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- <script src="./assets/js/app.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.8.0/angular-route.min.js"></script>
+    <!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/quiz.js"></script>
+<script src="assets/js/subject.js"></script>
+<script src="assets/js/test.js"></script>
+<script src="assets/js/login.js"></script>
+<script src="assets/js/forgotpass.js"></script>
+<script src="assets/js/changepass.js"></script>
+<script src="assets/js/register.js"></script>
+<script src="assets/js/updateAccount.js"></script>
+<script src="assets/js/sweetalert2.min.js"></script>
+<script src="db/Students.js"></script>
+
+<!-- <script src="assets/js/test.js"></script> -->
+  </body>
+</html>

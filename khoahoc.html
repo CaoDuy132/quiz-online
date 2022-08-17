@@ -1,0 +1,51 @@
+<!-- <link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<link rel="stylesheet" href="assets/css/khoahoc.css" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- <div class="container"> -->
+<div class="row course mt-30 mx-auto">
+  <button class="btn btn-outline-secondary btn_left" ng-click="pre()">
+    <i class="fas fa-angle-left"></i>
+  </button>
+  <button class="btn btn-outline-secondary btn_right" ng-click="next()">
+    <i class="fas fa-angle-right"></i>
+  </button>
+  <div class="col-md-6" ng-repeat="item in list_subject|limitTo:4:start">
+    <div class="blog-card blog-card-blog">
+      <div class="blog-table d-flex">
+        <div class="img_control">
+          <a href="#">
+            <img class="img" src="./assets/img/{{item.Logo}}" />
+          </a>
+          <div class="ripple-cont"></div>
+        </div>
+        <div class="w-100 text-center">
+          <h5 class="blog-card-caption">
+            <a href="#">{{item.Name}}</a>
+          </h5>
+          <div class="mx-auto text-center">
+            <br />
+            <!-- href="#!thitracnghiem/{{item.Id}}/{{item.Name}}" -->
+            <button class="btn btn-success" ng-click="check(item.Id,item.Name)">
+              Test ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mx-auto text-center mb-3">
+  <button class="btn btn-outline-success" ng-click="pre()">
+    <i class="fas fa-angle-left"></i>
+  </button>
+  <button class="btn btn-outline-success" ng-click="next()">
+    <i class="fas fa-angle-right"></i>
+  </button>
+</div>

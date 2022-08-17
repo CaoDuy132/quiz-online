@@ -1,0 +1,93 @@
+
+<section class="h-100 gradient-form" style="background-color: #eee">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-50">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0 " >
+            <div class="col-lg-12">
+              <div class="card-body">
+                <div class="text-center">
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                    style="width: 185px"
+                    alt="logo"
+                  />
+                  <h4 class="mt-1 pb-1">Thời gian:</h4>
+                
+                  <h4 class="pb-1 green">{{(timer-timer%60)/60}}:{{timer%60}}</h4>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <hr />
+              <div class="col-12">
+                <h4 class="text-center">Bài thi: {{tenMonHoc}}</h4>
+              </div>
+              <hr />
+              <div class="col-6 text-right"></div>
+              <div class="col-6 text-end diem">Điểm {{testMark}}/10</div>
+            </div>
+
+            <div class="col-lg-11 mx-auto p-4 shadow-lg m-4" ng-repeat="item in caccauhoi|limitTo:1:start">
+              <p class="card-header ">
+                Câu {{start}}: {{item.Text}}
+                <span class="num">{{start}}/10</span>
+              </p>
+
+             
+                <div class="form-check">
+                  <form action="" name="formTest" class="disable">
+                    <fieldset ng-repeat="pa in item.Answers" class="mt-2">
+                    <input
+                    class="form-check-input"
+                    type="radio"
+                    name="input"
+                    id="input_answer"
+                    ng-model="elem[start].answer"
+                    value="{{pa.Id}}"
+                    ng-disabled="elem[start].sub==0"
+                    required
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    {{pa.Text}}
+                  </label>
+                </fieldset>
+                <button  ng-disabled="elem[start].sub==0||formTest.input.$invalid" type="button" class="btn btn-primary mb-3 ml-4 mt-3" ng-click="mark();elem[start].sub = 0">
+                  Kiểm tra
+                </button>
+                  </form>
+                </div>
+
+             
+              <div class="row">
+                <div class="col text-right text-center">
+                  <button class="btn btn-outline-primary" ng-click="first()">
+                    First 
+                  </button>
+                  <button class="btn btn-outline-primary" ng-click="pre()">
+                    <i class="fas fa-angle-double-left"></i>
+                  </button>
+                  <button class="btn btn-outline-primary" ng-click="next()">
+                    <i class="fas fa-angle-double-right"></i></button>
+                  <button class="btn btn-outline-primary" ng-click="last()">
+                    Last 
+                  </button>
+                </div>
+         
+            </div>
+           
+          
+          </div>
+          <div class="row">
+            <div class="col-lg-6 mb-4">
+              <button class="btn btn-danger" ng-click="finish()">Kết thúc bài thi</button>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
